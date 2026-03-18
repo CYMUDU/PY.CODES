@@ -1,2 +1,2 @@
 # Py.codes
-"Storing The Code"
+This is my first repository where i am storing my beginner level Github codes ,track and update them off and on
