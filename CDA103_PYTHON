@@ -1,0 +1,484 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMebXTBs0nCSDU0qOjzSX5S",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/CYMUDU/PY.CODES/blob/main/CDA103_PYTHON\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "vep9ndUn9TEG",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f162ea4d-6268-4f77-d4f7-e0e661214567",
+        "collapsed": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 7\n",
+            "7 <class 'str'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "c = input(\"Enter a number: \")\n",
+        "print(c, type(c))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c = input(\"Enter a first number: \")\n",
+        "c1 = input(\"ENter a second number: \")\n",
+        "F  = c + c1\n",
+        "print(F, type(F))"
+      ],
+      "metadata": {
+        "id": "4KZTsTBt_Z_w"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s = (eval (input(\"Enter a first number: \")))\n",
+        "s2  = (eval(input(\"Enter a Second number: \")))\n",
+        "T = (s*s2)\n",
+        "print(T, type(T))\n"
+      ],
+      "metadata": {
+        "id": "dj_zwJFVA9wb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "explicit data type conversion"
+      ],
+      "metadata": {
+        "id": "CPqbHmIyEGJk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "del print # remove the variable shadowing the built-in print function\n",
+        "f1 = (int(input(\"Enter a first number: \")))\n",
+        "f2 = (int(input(\"Enter a second number: \")))\n",
+        "print(f1, type(f1), f2, type(f2))"
+      ],
+      "metadata": {
+        "id": "Oudu7gYRCcTv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "f1 = float(input('Enter a first number: '))\n",
+        "f2 = float(input('Enter a second number: '))\n",
+        "(f1, type(f1), f2, type(f2))"
+      ],
+      "metadata": {
+        "id": "75ezvOUwGtbn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "data type conversion :\n",
+        "int() can be converted from float to integer and string to integer (prvide the string contains the string contains an integer value)\n",
+        "\n",
+        "float can convert from int to float And string to float (provided the string contains a numeric value)\n",
+        "str() can convert any numeric t0 string"
+      ],
+      "metadata": {
+        "id": "mraQTfJHLwPJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "x = \"10\"\n",
+        "z6 = float(x)\n",
+        "print(z6 , type(z6))# conversion of str"
+      ],
+      "metadata": {
+        "id": "l2n08qRlM9S-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Assignment"
+      ],
+      "metadata": {
+        "id": "ebWgIXbjPFft"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 11\n",
+        "y = 3\n",
+        "z = (x,y)\n",
+        "print(z)\n",
+        "x,y,z = 3,5,7\n",
+        "print(x,y,z)\n"
+      ],
+      "metadata": {
+        "id": "sLdTuZaFPNGQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "```\n",
+        "# This is formatted as code\n",
+        "```\n",
+        "The reason we use a temp variable is to prevent data loss. Let's say you have two variables, x and y, with initial values.\n",
+        "\n",
+        "If you tried to swap them directly like this:\n",
+        "\n",
+        "x = y (The original value of x would be overwritten and lost)\n",
+        "y = x (Now y would just get the new value of x, which is the original value of y, so both x and y would end up with the same value as y's original value)\n",
+        "To avoid this, the temp variable acts as a temporary storage:\n",
+        "\n",
+        "temp = x: We first store the original value of x in temp.\n",
+        "x = y: Now, we can safely assign the value of y to x, because x's original value is preserved in temp.\n",
+        "y = temp: Finally, we assign the value from temp (which was the original value of x) to y.\n",
+        "This three-step process ensures that both original values are maintained and correctly swapped. While Python offers a more concise way to swap variables using tuple assignment (x, y = y, x, as shown in cell -46loH1zQDYS), understanding the temp variable method is fundamental to computer science concepts of variable assignment and memory management.\n"
+      ],
+      "metadata": {
+        "id": "ovYu9UxLLaL-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 5\n",
+        "y = 7\n",
+        "temp = x #temp = 5 ,x = 5 ,y = 7\n",
+        "x = y #temp = 5, x = 7, y = 7\n",
+        "y = temp #temp = 5, y = 5, x = 7\n",
+        "print(\"after swappin:\", x,y)"
+      ],
+      "metadata": {
+        "id": "umT4fxcHQs7Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "variable names and identifiers*<br>\n",
+        "The identifiers are the variables that are used in the program.There are certain rules about how identifiers are formed:<br>\n",
+        "Rule 1: Every identifier must begin with a letter (  a-z or A-Z) or an underscore (_) which may be followed bay an sequence of letters, digits or underscores<br>\n",
+        "Rule2: identifiers are case sensitive ( \"var\" and Var are wo different identifiers<br>\n",
+        "Rule3:identifiers can not be reserved words or key words like true, false , none, and, or, as, assert, break, class, continue ,pass, raise etc.\n"
+      ],
+      "metadata": {
+        "id": "Yj9u1o4FxB_K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 25\n",
+        "print(var)"
+      ],
+      "metadata": {
+        "id": "Mh7k0f7RRGUR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**OPERATORS AND EXPRESSIONS**"
+      ],
+      "metadata": {
+        "id": "DI6I1gKiDXqH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Basic operators in python<br>\n",
+        "1. arithematic operators\n",
+        "2. comparison operators\n",
+        "3. logical operators\n",
+        "4. assignment operators\n",
+        "5. Conditional operators  \n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "6oda02OnDoCy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "*Arithematic operators*<br>"
+      ],
+      "metadata": {
+        "id": "037_p01rE0Aa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "DYHsCTB0Nv6T"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 8\n",
+        "b = 4\n",
+        "print(a+b)\n",
+        "print(a-b)\n",
+        "print(a*b)\n",
+        "print(a/b) #it gives division result in a float form\n",
+        "print(a//b) #it gives quotient\n",
+        "print(a%b) #will give a reminder\n",
+        "print(a**b) #it worsk(*)as multipplication, as well(**)for square root , so here it is , 8 to the power 4\n"
+      ],
+      "metadata": {
+        "id": "i2t8CrIAxLo9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**comparison** **operator** **always** **returns** a **boolean** **value**"
+      ],
+      "metadata": {
+        "id": "aAvI9uUEQI5I"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 8\n",
+        "b = 4\n",
+        "print(a == b) #check whether the value of operands are same or not.if they are it returns TRUE,otherwis FALSE\n",
+        "print(a!= b) #check whether the value of operands are same or not.if they weren't equal, returns TRUE,otherwise FALSE\n",
+        "print(a>b)\n",
+        "print(a<b)\n",
+        "print(a>=b)\n",
+        "print(a<=b)"
+      ],
+      "metadata": {
+        "id": "Rie0_nPHI0sI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Assignment operator"
+      ],
+      "metadata": {
+        "id": "BJ54PM4sQRT8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 6 #it means assigning a value from rigth operand/literal to right operand/literal\n",
+        "b = 5\n",
+        "a+=b #it mean a = a + b add and assign\n",
+        "print(a)\n",
+        "a+=b # it mean a = a + b\n",
+        "print(a)\n",
+        "b+=a  #it means b = a+b\n",
+        "print(b)\n",
+        "a+=b #it means a = a + b\n",
+        "print(a)\n",
+        "a*=b\n",
+        "print(a)\n",
+        "b/=a\n",
+        "print(b)\n",
+        "a%=b\n",
+        "print(a)\n",
+        "a//=b\n",
+        "print(a)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "p6EkFg1SO0S6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Bitwise operators\n"
+      ],
+      "metadata": {
+        "id": "2XoHKhpF2msV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 8\n",
+        "b = 4"
+      ],
+      "metadata": {
+        "id": "BnXZJR8P2rMG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "PRACTICE"
+      ],
+      "metadata": {
+        "id": "VHuz-JHzkzDZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input(\"Enter a name: \")\n",
+        "age = int(input(\"Enter a age: \"))\n",
+        "print(f\"Hello {name} you are {20} years old\") #curved brackets are using to displaye value of variable\n"
+      ],
+      "metadata": {
+        "id": "cwIHFIGQkgyT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Enter a first integer: \"))\n",
+        "x1 = int(input(\"Enter a second integer: \"))\n",
+        "sum = x + x1\n",
+        "prod = x*x1\n",
+        "diff = x - x1\n",
+        "Quotient = x/x1\n",
+        "print(f\"the sume is {sum} \",f\"the product is {prod}\",f\"the difference is {diff}\", f\"the quotient is {Quotient:.2f}\")"
+      ],
+      "metadata": {
+        "id": "QHTR9dBZs0tZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "num = int(input(\"Enter an integer: \"))\n",
+        "num1 = float(input(\"Enter a float: \"))\n",
+        "add = num + num1\n",
+        "print(f\"the sume is {num + num1}\", type(num), type(num1))\n"
+      ],
+      "metadata": {
+        "id": "yW34VeVw_Pta"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = float(input(\"Enter a number: \"))\n",
+        "x1 = int(x)\n",
+        "x2 = str(x)\n",
+        "print(x1,type(x1), x2,type(x2))\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "P7_S0JjBacr2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ply1 = int(input(\"Enter a score of 1 player: \"))\n",
+        "ply2 = int(input(\"Enter a score of 2 player: \"))\n",
+        "scores = ply1 , ply2\n",
+        "print(\"Before swapping their scores: \",scores)\n",
+        "#squares of their scores\n",
+        "furqan = ply1**2\n",
+        "arfad  = ply2**2\n",
+        "print(\"After squaring their scores: \", furqan , arfad)\n",
+        "\n",
+        "\n",
+        "#swap their sqr_score without using third variable\n",
+        "temp = furqan\n",
+        "furqan = arfad\n",
+        "arfad = temp\n",
+        "print(\"after swapping the playesr: \",furqan, arfad)\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "rv6d_be6kZSl"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
